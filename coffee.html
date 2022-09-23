@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-with, initial-scale=1.0">
+    <title>Coffee Design - Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"> </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <!-- navigation bar menu -->
+                <ul>
+                    <li><a href="Index.html">HOME</a></li>
+                    <li><a href="Subscription.html">SUBSCRIPTION</a></li>
+                    <li><a href="coffee.html">COFFEE</a></li>
+                    <li><a href="tea.html">TEA</a></li>
+                    <li><a href="accessories.html">ACCESSORIES</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="form.html" class="hero-btn">LOGIN/SIGNUP</a></li>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Coffees</h1>
+    </section>
+<!------Coffee------>
+
+<section class="coffee">
+    <h1>Coffees we offer</h1>
+    <p>there are alot of coffees we offer, please check them out</p>
+
+    <div class="row">
+        <!-- coffee item 1 -->
+        <div class="coffee-col">
+            <img src="images/coffee_1.png">
+                <h3>Fisher Coffee</h3>
+                <h5>description:</h5>
+                    <p>try this coffee, it is bitter</p>
+                    <!-- vue button to cound how many items user wants when clicked -->
+                <div id="app"><a  class="hero-btn red-btn" button @click="count++">BUY NOW: {{ count }}</a></div>
+        </div>
+        <!-- coffee item 2 -->
+        <div class="coffee-col">
+            <img src="images/coffee_2.png">
+                <h3>Brazil Minas Gerais</h3>
+                <h5>description:</h5>
+                    <p>try this coffee, it is bitter</p>
+                    <!-- vue button to cound how many items user wants when clicked -->
+                    <div id="app2"><a  class="hero-btn red-btn" button @click="count++">BUY NOW: {{ count }}</a></div>
+                </div>
+                <!-- coffee item 3 -->
+        <div class="coffee-col">
+            <img src="images/coffee_3.png">
+                <h3>Brazil Santos</h3>
+                <h5>description:</h5>
+                    <p>try this coffee, it is bitter</p>
+                    <!-- vue button to cound how many items user wants when clicked -->
+                    <div id="app3"><a  class="hero-btn red-btn" button @click="count++">BUY NOW: {{ count }}</a></div>
+                </div>
+    </div>
+
+    <div class="row">
+        <!-- coffee item 4 -->
+        <div class="coffee-col">
+            <img src="images/coffee_4.png">
+                <h3>Brazil Frankenstein</h3>
+                <h5>description:</h5>
+                    <p>try this coffee, it is bitter</p>
+                    <!-- vue button to cound how many items user wants when clicked -->
+                    <div id="app4"><a  class="hero-btn red-btn" button @click="count++">BUY NOW: {{ count }}</a></div>
+                </div>
+                <!-- coffee item 5 -->
+        <div class="coffee-col">
+            <img src="images/coffee_5.png">
+                <h3>Colombian Coffee</h3>
+                <h5>description:</h5>
+                    <p>try this coffee, it is bitter</p>
+                    <!-- vue button to cound how many items user wants when clicked -->
+                    <div id="app5"><a  class="hero-btn red-btn" button @click="count++">BUY NOW: {{ count }}</a></div>
+                </div>
+                <!-- coffee item 6 -->
+        <div class="coffee-col">
+            <img src="images/coffee_6.png">
+                <h3>Colombian Perfection</h3>
+                <h5>description:</h5>
+                    <p>try this coffee, it is bitter</p>
+                    <!-- vue button to cound how many items user wants when clicked -->
+                    <div id="app6"><a  class="hero-btn red-btn" button @click="count++">BUY NOW: {{ count }}</a></div>
+                </div>
+    </div>
+
+</section>
+
+
+<!------footer------>
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>follow the socials to keep up-to-date</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>made with <i class="fa fa-heart-o"></i> by Matthew Hesketh</p>
+</section>
+
+<!-- jue.js scripts for button count up for each item -->
+<script>
+let app = new Vue({ 
+    el: '#app', 
+    data: {
+    count: 0, 
+}
+});
+    app.count = 0;
+
+    let app2 = new Vue({ 
+    el: '#app2', 
+    data: {
+    count: 0, 
+}
+});
+    app.count = 0;
+
+    let app3 = new Vue({ 
+    el: '#app3', 
+    data: {
+    count: 0, 
+}
+});
+    app.count = 0;
+
+
+    let app4 = new Vue({ 
+    el: '#app4', 
+    data: {
+    count: 0, 
+}
+});
+    app.count = 0;
+
+
+    let app5 = new Vue({ 
+    el: '#app5', 
+    data: {
+    count: 0, 
+}
+});
+    app.count = 0;
+
+
+    let app6 = new Vue({ 
+    el: '#app6', 
+    data: {
+    count: 0, 
+}
+});
+    app.count = 0;
+</script>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

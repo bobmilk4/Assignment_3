@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-with, initial-scale=1.0">
+    <title>Coffee Design - Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"> </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <!-- navigation bar -->
+                <ul>
+                    <li><a href="Index.html">HOME</a></li>
+                    <li><a href="Subscription.html">SUBSCRIPTION</a></li>
+                    <li><a href="coffee.html">COFFEE</a></li>
+                    <li><a href="tea.html">TEA</a></li>
+                    <li><a href="accessories.html">ACCESSORIES</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="form.html" class="hero-btn">LOGIN/SIGNUP</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+    <div class="text-box">
+        <h1>Tea and Coffee delivery</h1>
+        <p>here at Starkbucks tea and coffee, we know the feeling of when you run out of your tea or coffee. <br>
+        with our subscription service, youll never have to worry about where your next bag is coming from!
+        </p>
+        <a href="subscription.html" class="hero-btn">Explore subscriptions</a>
+    </div>
+
+    </section>
+
+<!-------subscription section ------->
+<section class="subscription">
+    <h1>Subscriptions</h1>
+    <p>our subscription service ensures that you never have to worry about running out of tea or coffee again! <br>
+        just set and forget! <br>
+        <br> choose from the following options to get started</p>
+
+    <div class="row">
+        <div class="sub-col">
+            <h3>weekly</h3>
+            <p>choose your favorite tea or coffee to be scheduled to your doorstep every week. </p>
+        </div>
+        <div class="sub-col">
+            <h3>bi-weekly</h3>
+            <p>choose your favorite tea or coffee to be scheduled to your doorstep every second week. </p>
+        </div>
+        <div class="sub-col">
+            <h3>monthly</h3>
+            <p>choose your favorite tea or coffee to be scheduled to your doorstep every month </p>
+        </div>
+    </div>
+    <a href="Subscription.html" class="hero-btn red-btn" >VIEW ALL SUBSCRIPTIONS</a>
+
+</section>
+
+<!-------tea section------->
+<section class="tea">
+    <h1>Teas we offer</h1>
+    <p>there are alot of teas we offer, please check them out</p>
+
+    <div class="row">
+        <div class="tea-col">
+            <a href="tea.html"><img src="images/tea.png">
+            <div class="layer" @mouseover="hover = true" @mouseleave="hover = false" >
+                <Transition>
+                    <h3 v-if="hover">BAGGED TEA</h3>
+                </Transition>
+            </div>
+        </div></a>
+        <div class="tea-col">
+            <a href="tea.html"><img src="images/tea2.png">
+                <div class="layer" @mouseover="hover = true" @mouseleave="hover = false" >
+                <h3 v-if="hover">LOOSE TEA</h3>
+            </div>
+        </div></a>
+        <div class="tea-col">
+            <a href="tea.html"><img src="images/tea3.png">
+                <div class="layer" @mouseover="hover = true" @mouseleave="hover = false" >
+                <h3 v-if="hover">TEA ACCESSORIES</h3>
+            </div>
+        </div></a>
+    </div>
+    <a href="tea.html" class="hero-btn red-btn">VIEW ALL TEA</a>
+
+</section>
+
+<!-------coffees section ------->
+
+<section class="coffee">
+    <h1>Coffees we offer</h1>
+    <p>there are alot of coffees we offer, please check them out</p>
+
+    <div class="row">
+        <div class="tea-col">
+            <a href="coffee.html"><img src="images/coffee.png">
+            <div class="layer">
+                <h3>COFFEE BEANS</h3>
+            </div>
+        </div></a>
+        <div class="tea-col">
+            <a href="coffee.html"><img src="images/coffee2.png">
+            <div class="layer">
+                <h3>GROUNDED COFFE</h3>
+            </div>
+        </div></a>
+        <div class="tea-col">
+            <a href="coffee.html"><img src="images/coffee3.png">
+            <div class="layer">
+                <h3>COFFEE ACCESSORIES</h3>
+            </div>
+        </div></a>
+    </div>
+    <a href="coffee.html" class="hero-btn red-btn">VIEW ALL COFFEE</a>
+
+</section>
+
+
+<!------Testimonials section ------>
+
+<section class="testimonials">
+    <h1>what our customers say</h1>
+    <p>they all say its good. go buy my stuff. i want money.</p>
+    <div class="row">
+        <div class="testimonial-col">
+            <img src="images/user1.png">
+            <div>
+                <p>i say its good, go buy the stuff. 
+                the creator will get money from you</p>
+                <h3>Matthew Hesketh</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <img src="images/user2.png">
+            <div>
+                <p>i say its good, go buy the stuff. 
+                the creator will get money from you</p>
+                <h3>Sam Hesketh</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="percentage_off_offer">
+    <div class="percentage_off" id="app2">
+        <component1 @random="random"></component1> 
+        <H1>random percentage off. JUST FOR YOU: {{ count }}%</h1>
+        </div>
+</section>
+
+<!------footer section ------>
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>follow the socials to keep up-to-date</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    
+    <div id="app">
+        <button @click="who = !who">who bult this website?</button>
+
+        <p v-if="who">i wonder who? </p>
+        <p v-else>made with <i class="fa fa-heart-o"></i> by Matthew Hesketh ID:218380133</p>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<!-- scripts for Vue.js -->
+<!-- button @click script  -->
+<script>
+let app = new Vue({ 
+    el: '#app',
+        data: {
+            who: true,
+            }
+    });
+
+data : {
+    hover : false
+}
+    </script>
+
+<!-- vue.js script for random percentage off -->
+<script type="text/x-template" id="component1">
+    
+    <div>
+        <button @click="random">random</button>
+    </div>
+</script>
+<script>
+    var component1 = {
+        template: '#component1',
+        methods: {
+            random: function () {
+                this.$emit('random', Math.random());
+            },
+        },
+    };
+    var app2 = new Vue({
+        el: '#app2',
+        data: {
+            count: 0,
+        },
+        methods: {
+            random:function (random) {
+                this.count = random;
+            },
+        },
+        components: {
+            component1,
+        },
+    });
+</script>

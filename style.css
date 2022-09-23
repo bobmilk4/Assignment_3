@@ -1,0 +1,629 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/banner.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+/* css for navigation menu */
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img{
+  width: 150px;
+  height: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+/*text information for navigation bar*/
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+/*effects for navigation bar */ 
+.nav-links ul li::after{
+  content:'';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+/*creates a underline when hovering over navigation*/
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+.text-box{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.text-box h1{
+  font-size: 62px;
+}
+
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+/*information to create button link*/
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+/*effect for button*/
+.hero-btn:hover{
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+}
+
+nav .fa{
+  display: none;
+}
+/* @media tag for resposive layout for different screensize  */
+@media(max-width: 700px){
+  .text-box h1{
+    font-size: 20px;
+  }
+  .nav-links ul li{
+    display: block;
+  }
+  .nav-links{
+    position: absolute;
+    background:#f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul{
+    padding: 30px;
+  }
+  .hero-btn{
+    padding: 12px 3px;
+  }
+}
+
+/*------subscription------*/
+.subscription{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p{
+  color:#777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-col{
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/*box effect for coffee section*/
+.sub-col:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px){
+  .row{
+    flex-direction: column;
+  }
+}
+
+/*------tea------*/
+
+.tea{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.tea-col{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tea-col img {
+  width: 100%;
+  height: 100%; 
+  display: block;
+}
+
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover{
+  background: rgba(226,0,0,0.7);
+}
+
+/* hover effect on the tea images in index.html */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.layer h3{
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover h3{
+  bottom: 49%;
+  opacity: 1;
+}
+
+
+/*------coffee------*/
+
+.coffee{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.coffee-col{
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+
+.coffee-col img{
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+}
+
+.coffee-col p{
+  padding: 0;
+}
+
+.coffee-col h3{
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.coffee-col h5{
+  padding: 0;
+}
+
+/*------testimonials------*/
+.testimonials{
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.testimonial-col{
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: #fff3f3;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+}
+
+.testimonial-col img{
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.testimonial-col p{
+  padding: 0;
+}
+
+.testimonial-col h3{
+  margin-top: 15px;
+  text-align: left;
+}
+
+.testimonial-col .fa{
+  color: #f44336;
+}
+
+/* @media tag for resposive layout for different screensize  */
+@media(max-width: 700px){
+  .testimonial-col img{
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+}
+
+.percentage_off{
+  text-align: center;
+  background: #fff3f3;
+  margin-bottom: 5%;
+}
+
+/*------footer------*/
+
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #fff3f3;
+}
+
+.footer h4{
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.icons .fa{
+  color: #f44336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+.fa-heart-o{
+  color: #f44336;
+}
+
+
+/*------subscription page------*/
+.sub-header{
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/banner.png);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.sub-header h1{
+  margin-top: 100px;
+}
+
+.subscription-content{
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.subscription-col{
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+
+.subscription-col img{
+  width: 100%;
+}
+
+.subscription-col h1{
+  padding-top: 0;
+}
+
+.subscription-col p{
+  padding: 15px 0 25px;
+}
+
+.red-btn{
+  border: 1px solid #f44336;
+  background: transparent;
+  color: #f44336;
+}
+
+.red-btn:hover{
+  color: #fff;
+}
+
+/*------FAQ------*/
+
+.faq{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.faq-col{
+  flex-basis: 48%;
+  padding: 30px 0px;
+  text-align: center;
+  padding-right: 40px;
+}
+.faq-col1{
+  flex-basis: 48%;
+  padding: 30px 2px;
+  text-align: center;
+  padding-left: 40px;
+}
+.faq-content .row{
+  background-color: rgb(223, 211, 211);
+}
+
+/*-------contact------*/
+.contact{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.contact-col{
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.contact-col .fa{
+  
+    font-size: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/*------SIGNUP/LOGIN form------*/
+.bod{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a2a8ba;
+}
+.container{
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.container .forms{
+  display: flex;
+  align-items: center;
+  height: 440px;
+  width: 200%;
+  transition: height 0.2s ease;
+}
+.container .form{
+  width: 50%;
+  padding: 30px;
+  background-color: #fff;
+  transition: margin-left 0.18s ease;
+}
+/* login active container on form.html */
+.container.active .login{
+  margin-left: -50%;
+  opacity: 0;
+  transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+/* signup active container in form.html */
+.container .signup{
+  opacity: 0;
+  transition: opacity 0.09s ease;
+}
+.container.active .signup{
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.container.active .forms{
+  height: 670px;
+}
+
+.container .form .title{
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+}
+.form .title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: #4070f4;
+  border-radius: 25px;
+}
+.form .input-field{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-field input{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+  border-bottom-color: #4070f4 ;
+}
+
+.input-field i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+}
+
+.gender{
+  padding-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+  color: #4070f4 ;
+}
+
+.input-field i.icon{
+  left: 0;
+}
+.input-field i.showHidePw{
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+.form .checkbox-text{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+  display: flex;
+  align-items: center;
+}
+.checkbox-content input{
+  margin: 0 8px -2px 4px;
+  accent-color: #4070f4;
+}
+.form .text{
+  color: #333;
+  font-size: 14px;
+}
+.form a.text{
+  color: #4070f4;
+  text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+
+.form .button{
+  margin-top: 35px;
+}
+.form .button input{
+border: none;
+color: #fff;
+font-size: 17px;
+font-weight: 500;
+letter-spacing: 1px;
+border-radius: 6px;
+background-color:#4070f4;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.button input:hover{
+  background-color: #265df2;
+}
+.form .login-signup{
+  margin-top: 30px;
+  text-align: center;
+}

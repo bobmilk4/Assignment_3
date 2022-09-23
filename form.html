@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-with, initial-scale=1.0">
+    <title>Coffee Design - Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+<section class="bod">
+    <div class="container ">
+        <div class="forms">
+            <div class="form login">
+                <!-- login form area -->
+                <span class="title">Login</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <!-- email text box -->
+                        <input type="text" placeholder="Enter your Email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <!-- password text box -->
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <!-- remember me checkbox -->
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">remember me</label>
+                        </div>
+
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button"><a href="index.html">
+                        <input type="button" value="Login Now"></a>
+                    </div>
+                </form>
+                <!-- registration link to change form layout  -->
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text signup-link">Signup now</a>
+                    </span>
+                </div>
+            </div>
+
+            <!--Registration form-->
+            <div class="form signup">
+                <span class="title">Registration</span>
+                <form action="#">
+                    <!-- name textbox -->
+                    <div class="input-field" id="app2">
+                        <input type="text" placeholder="Enter your Name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <!-- email textbox -->
+                        <input type="text" placeholder="Enter your Email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <!-- password textbox -->
+                        <input type="password" class="password" placeholder="Create password" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <!-- confirm password textbox -->
+                        <input type="password" class="password" placeholder="Confirm password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+                    <!-- Vue.js gender checkbox choice -->
+                    <div class="gender" id="app">
+                        <span class="text">choose your gender<br/>
+                        male
+                        <input type="radio" v-model="selected" value="Male" />
+                        female
+                        <input type="radio" v-model="selected" value="Female" />
+                        <br/>
+                        <span>you are: {{ selected }}</span>
+                      </span>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="sigCheck">
+                            <label for="sigCheck" class="text">Remember me</label>
+                        </div>
+
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+                    <!-- login button -->
+                    <div class="input-field button"><a href="index.html">
+                        <input type="button" value="Login Now"></a>
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text login-link">Signup now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
